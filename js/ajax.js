@@ -96,6 +96,7 @@ $(function(){
                             <td>
                                 <button class="btn btn-primary edit">Modificar</button>
                                 <button class="btn btn-danger delete">Eliminar</button>
+                                <a href="../controllers/reporte.php?cedula=${usuario.cedula}" class="btn btn-warning reporte">Reporte</a>
                             </td>
                         </tr>
                         `;
@@ -115,6 +116,13 @@ $(function(){
             })
         }
     })
+
+    //Reportes 
+    /* $(document).on("click", ".reporte", ()=>{
+        const element = $(this)[0].activeElement.parentElement.parentElement;
+        const cedula = $(element).attr("usuarioCedula")
+        $.post("../controllers/reporte.php", { cedula })
+    }) */
 
     //Modificar
     $(document).on("click", ".edit", ()=>{
